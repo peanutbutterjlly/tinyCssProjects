@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: crimson;
+}
+
+.small-heading {
+	text-transform: uppercase;
+}
+
+#quote-by-author {
+	background: lightgray;
+	border-radius: 1rem;
+	line-height: 1.75;
+	padding: .8rem;
+}
+
+article p {
+	line-height: 2;
+}
+
+.list>li {
+	color: crimson;
+}
+
+.list>li ul {
+	color: initial;
+}
+
+/* on adjacent sibling combinator */
