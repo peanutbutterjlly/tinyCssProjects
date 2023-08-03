@@ -30,4 +30,40 @@ article p {
 	color: initial;
 }
 
-/* on adjacent sibling combinator */
+header+p {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+header~img {
+	border: 4px solid crimson;
+}
+
+a:link {
+	color: #1D70B8;
+}
+
+a:visited {
+	color: #4C2C92;
+}
+
+a:hover {
+	color: #003078;
+}
+
+a:focus {
+	color: solid 1px crimson;
+}
+
+header+p::first-letter {
+	color: crimson;
+	font-style: italic;
+}
+
+[lang="it"]::before {
+	content: "🇮🇹 ";
+}
+
+* {
+	font-family: sans-serif;
+}
