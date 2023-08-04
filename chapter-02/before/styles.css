@@ -9,28 +9,82 @@ body {
   color: #151412
 }
 
-main { margin: 24px }
+main {
+  margin: 24px
+}
 
-img { 
-  float: left; 
+img {
+  float: left;
   margin: 12px 12px 12px 0
 }
 
-main > * { 
-  border: solid 1px #bfbfbf;
-  padding: 12px;
+
+main>*,
+section {
+  display: flow-root
 }
-main > *, section { display: flow-root }
 
-p, ul { line-height: 1.5 }
+p,
+ul {
+  line-height: 1.5
+}
 
-article p span { display: block; }
+article p span {
+  display: block;
+}
+
 article p span:last-of-type,
 article p span:nth-last-child(2) {
   text-indent: 16px
 }
 
-.plays ul { margin-left: 162px }
+.plays ul {
+  margin-left: 162px
+}
 
+main {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "header  header  header"
+    "content content author"
+    "content content aside"
+    "plays      .    aside"
+    "footer  footer  footer";
+  grid-template-columns: repeat(2, minmax(auto, 1fr)) 250px;
+}
 
+header {
+  grid-area: header;
+}
 
+article {
+  grid-area: content;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.author-details {
+  grid-area: author;
+}
+
+.plays {
+  grid-area: plays;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (min-width: 955px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "content author aside"
+      "content plays aside"
+      "footer footer footer";
+  }
+}
