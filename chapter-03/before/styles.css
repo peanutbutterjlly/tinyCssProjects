@@ -109,3 +109,34 @@ rect {
     animation: none;
   }
 }
+
+progress {
+  border-radius: 20px;
+  height: 24px;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: linear-gradient(to right, #128688 0%, #4db3ff 100%);
+}
+
+::-webkit-progress-value {
+  background-color: #7be6e8;
+  border-radius: 20px;
+}
+
+::-moz-progress-bar {
+  background-color: #7be6e8;
+  border-radius: 20px;
+}
+
+::-webkit-progress-bar {
+  border-radius: 20px;
+  background: #4db3ff;
+  background: linear-gradient(to right, #128688 0%, #4db3ff 100%);
+}
+
+::-webkit-progress-inner-element {
+  border-radius: 20px;
+}
