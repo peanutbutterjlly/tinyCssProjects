@@ -1,1 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=PT+Serif&display=swap" rel="stylesheet');
 
+body {
+	background-color: #f9f7f1;
+	font-family: 'PT Serif', serif;
+	color: #404040;
+	padding: 0 24px;
+}
+
+:where(h1, h2, h3) {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+:where(h2, h3) {
+	line-height: .95;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3rem;
+	margin-bottom: 16px;
+}
+
+h3 {
+	font-size: 2rem;
+	margin-bottom: 12px;
+}
+
+time {
+	font: 700 1.5rem 'Oswald', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+
+	border-top: 3px solid #333333;
+	border-bottom: 3px solid #333333;
+	padding: 12px 0;
+
+	display: block;
+}
+
+time sup {
+	font-size: .875rem;
+	font-weight: normal;
+}
+
+blockquote {
+	font: 1.8rem/1.25 'Oswald', sans-serif;
+	margin: 1.5rem 2rem;
+
+}
+
+blockquote::before {
+	content: open-quote;
+}
+
+blockquote::after {
+	content: close-quote;
+}
