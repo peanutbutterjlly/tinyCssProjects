@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=PT+Serif&display=swap" rel="stylesheet');
 
-body {
+html {
 	background-color: #f9f7f1;
+}
+
+body {
 	font-family: 'PT Serif', serif;
 	color: #404040;
+	max-width: 1200px;
+	margin-inline: auto;
 	padding: 0 24px;
 }
 
@@ -62,4 +67,51 @@ blockquote::before {
 
 blockquote::after {
 	content: close-quote;
+}
+
+@counter-style emoji {
+	symbols: '☕️';
+	system: cyclic;
+	suffix: ' ';
+}
+
+article ul {
+	list-style: emoji;
+}
+
+img {
+	filter: grayscale(100%);
+}
+
+figure {
+	margin: 0 0 12px 0;
+	text-align: center;
+}
+
+figcaption {
+	font-family: 'Oswald', sans-serif;
+}
+
+@media (min-width: 955px) {
+	article {
+		column-count: 3;
+		column-rule: 2px solid #333333;
+		column-gap: 42px;
+		margin-top: 36px;
+	}
+
+	blockquote {
+		column-span: all;
+	}
+
+	figure {
+		break-inside: avoid;
+		float: left;
+		margin-right: 1.5rem;
+	}
+
+	p {
+		hyphens: auto;
+		text-align: justify;
+	}
 }
