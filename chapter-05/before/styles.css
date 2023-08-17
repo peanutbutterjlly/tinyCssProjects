@@ -32,3 +32,37 @@ main {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
+
+h1 {
+	font: 900 120px "Rubik", sans-serif;
+	text-transform: uppercase;
+	background: url('bg-img.jpg');
+	background-size: cover;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-moz-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	color: white;
+}
+
+.meeru-island {
+	background-image: url('1.jpg');
+}
+
+.flamingo-beech {
+	background-image: url('2.jpg');
+}
+
+.protur-safari {
+	background-image: url('3.jpg');
+}
+
+.mountain-view {
+	background-image: url(4.jpg);
+}
+
+main>section {
+	background-size: cover;
+	background-color: #3a8491;
+	border-radius: 4px;
+}
