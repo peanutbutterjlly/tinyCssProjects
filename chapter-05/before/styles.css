@@ -5,6 +5,7 @@
 }*/
 
 body {
+	background: #010101;
 	display: grid;
 	place-items: center;
 	margin-top: 40px;
@@ -108,4 +109,31 @@ a:hover {
 a:focus {
 	outline: 1px dashed #e69500;
 	outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 700px) and (prefers-reduced-motion: no-preference) {
+	main>section>div {
+		transform: translateY(calc(350px - 8rem));
+		height: 5rem;
+		overflow: hidden;
+		transition: all 700ms ease-in-out;
+	}
+
+	main>section>div>*:not(h2) {
+		opacity: 0;
+		transform: translateY(1rem);
+		transition: all 700ms ease-in-out;
+	}
+
+	section:hover div,
+	section:focus-within div {
+		transform: translateY(0);
+		height: calc(350px - 4rem);
+	}
+
+	section:hover div>*:not(h2),
+	section:focus-within div>*:not(h2) {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
