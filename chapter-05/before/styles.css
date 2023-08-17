@@ -66,3 +66,46 @@ main>section {
 	background-color: #3a8491;
 	border-radius: 4px;
 }
+
+main>section>div {
+	background-color: rgba(0, 0, 0, .75);
+	margin: 1rem;
+	padding: 1rem;
+	color: whitesmoke;
+	text-align: center;
+	font: 14px 'Rubik', sans-serif;
+	height: calc(100% - 4rem);
+	display: grid;
+	grid-template-rows: min-content auto min-content;
+	align-items: center;
+}
+
+section>h2 {
+	font-size: 1.3rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+
+section p {
+	font: italic 1.125rem 'Cardo', cursive;
+	line-height: 1.35;
+}
+
+a {
+	background-color: #ffa600;
+	color: rgba(0, 0, 0, .75);
+	padding: .75rem 1.5rem;
+	display: inline-block;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #e69500;
+}
+
+a:focus {
+	outline: 1px dashed #e69500;
+	outline-offset: 3px;
+}
