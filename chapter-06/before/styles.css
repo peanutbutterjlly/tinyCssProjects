@@ -31,6 +31,15 @@ body {
 	width: 75vw;
 	max-width: 500px;
 	border-radius: 4px;
+	text-align: center;
+	margin: calc(var(--imageSize) / 3 + 24px) 24px;
+	background-image: radial-gradient(circle at top,
+			var(--primary) 50%,
+			transparent 50%,
+			transparent);
+	background-size: 1500px 500px;
+	background-position: center -300px;
+	background-repeat: no-repeat;
 }
 
 img.portrait {
@@ -38,4 +47,5 @@ img.portrait {
 	height: var(--imageSize);
 	object-fit: cover;
 	border-radius: 50%;
+	margin-top: calc(-1 * var(--imageSize) / 3);
 }
