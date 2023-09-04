@@ -53,5 +53,14 @@ blockquote {
   float: right;
   margin-left: 1rem;
   border-radius: 50%;
+  /* shape-outside is needed for the circle and have content flow around it */
   shape-outside: margin-box;
+}
+
+.dog {
+  aspect-ratio: 126 / 161;
+  float: left;
+  shape-outside: url('https://raw.githubusercontent.com/michaelgearon/Tiny-CSS-Projects/960311cb3deabdaecabf838cc702837e58239ae9/chapter-07/after/img/dog.svg');
+  shape-margin: 1em; /* used to create space around the image */
+  margin-right: 1em;
 }
