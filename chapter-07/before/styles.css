@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+
 html {
   padding: 0;
   margin: 0;
@@ -10,11 +12,46 @@ body {
   max-width: 78ch;
   margin: 0 auto;
   font-family: 'Times New Roman', Times, serif;
-  border-left: double 5px rgba(0,0,0,.16);
+  border-left: double 5px rgba(0, 0, 0, 0.16);
   min-height: 100vh;
   box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
+}
+
+p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Passions Conflict', cursive;
+  font-size: 6em;
+  line-height: 0.5;
+}
+
+blockquote {
+  font-family: 'Passions Conflict', cursive;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.compass {
+  /*
+  this is how to make a circle to have content flow around it using shape outside and clip path 
+  aspect-ratio: 1;
+  float: right;
+  clip-path: circle(50%);
+  margin-left: 1rem;
+  shape-outside: circle(50%); */
+
+  /* using border radius now */
+  aspect-ratio: 1;
+  float: right;
+  margin-left: 1rem;
+  border-radius: 50%;
+  shape-outside: margin-box;
 }
