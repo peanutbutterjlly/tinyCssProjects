@@ -1,21 +1,27 @@
 
 /** On Load */
 (function() {
-  const fruits = { grapes: 3.23, pineapple: 2.29, strawberries: 4.62 }
+  const fruits = { grapes: 3.23, pineapple: 2.29, strawberries: 4.62 };
   const table = document.querySelector('table');
-  const inputs = Array.from(table.querySelectorAll('input'))
-  
-  calculateTotals()
+  const inputs = Array.from(table.querySelectorAll('input'));
 
-  inputs.forEach(input => {
-    input.addEventListener('change', calculateTotals)
-  })
+  calculateTotals();
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', calculateTotals);
+  });
   
+  /**
+   * Calculates the totals for the order based on the quantities of inputs.
+   *
+   * @param {type} inputs - the array of input elements
+   * @return {type} undefined
+   */
   function calculateTotals() {
     'use strict';
     let total = 0;
     let totalQty = 0;
-    inputs.forEach(input => {
+    inputs.forEach((input) => {
       const row = input.closest('tr');
       const qty = Number(input.value);
       const itemTotal = qty * fruits[input.name];
@@ -23,7 +29,7 @@
       itemTotalCell.innerText = '$ ' + itemTotal.toFixed(2);
       total += itemTotal;
       totalQty += qty;
-    })
+    });
     const totalCell = document.getElementById('total');
     const orderTotal = '$ ' + total.toFixed(2);
     totalCell.innerText = orderTotal;

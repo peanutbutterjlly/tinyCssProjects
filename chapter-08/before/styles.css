@@ -1,1 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
+:root {
+  --teal: #2c6c69;
+}
+
+body {
+  color: #171717;
+  font-family: 'Raleway', sans-serif;
+  font-variant-numeric: lining-nums;
+}
+
+h1,
+h2 {
+  color: var(--teal);
+}
+
+button,
+.button {
+  background: none;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-decoration: none;
+}
+
+button:hover,
+.button:hover {
+  outline: 1px dotted var(--teal);
+  outline-offset: 2px;
+}
+
+button:focus,
+.button:focus {
+  outline: 1px solid var(--teal);
+  outline-offset: 2px;
+}
