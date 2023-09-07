@@ -9,12 +9,24 @@ body {
   font-family: 'Raleway', sans-serif;
   font-variant-numeric: lining-nums;
   background: #fbffff;
+  padding: 1rem;
+}
+
+main {
+  max-width: 1280px;
+  margin-inline: auto;
 }
 
 section {
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 2px 2px 7px #aeb7b7;
+  margin: 1rem 0;
+}
+
+section h2 {
+  padding: 1rem;
+  margin: 0;
 }
 
 h1,
@@ -104,6 +116,30 @@ dt::after {
   content: ': ';
 }
 
+dl {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto max-content;
+  padding: 0 1rem;
+}
+
+dd {
+  text-align: right;
+}
+
+.actions {
+  padding: 1rem;
+  text-align: center;
+}
+
+.actions a {
+  margin: 0 0.25rem 0.5rem;
+}
+
+input[type='number'] {
+  text-align: right;
+}
+
 @media (max-width: 549px) {
   td,
   tr {
@@ -138,5 +174,32 @@ dt::after {
 
   tfoot th {
     padding: 5px;
+  }
+}
+
+@media (min-width: 550px) {
+  th:nth-of-type(n + 3),
+  td:nth-of-type(n + 3) {
+    text-align: right;
+  }
+
+  td,
+  th {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 955px) {
+  .section-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .my-cart {
+    flex-grow: 1;
+  }
+
+  .summary {
+    flex-basis: 250px;
   }
 }
