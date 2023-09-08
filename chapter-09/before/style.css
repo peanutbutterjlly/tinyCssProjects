@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(221, 238, 252);
+  margin-top: 80px;
+}
+
+.card-item {
+  max-width: 430px;
+  height: 270px;
+  margin: auto;
+  position: relative;
+}
+
+.card-item__side {
+  height: 100%;
+  width: 100%;
+}
+
+.front {
+  padding: 25px 15px;
+}
+
+.card-item__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.card-item__chip {
+  width: 60px;
+}
+
+.card-item__number {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-bottom: 35px;
+}
+
+.card-item__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.back {
+  padding-top: 30px;
+}
+
+.card-item__band {
+  height: 50px;
+  background: rgb(0 0 19 / 0.8);
+}
+
+.card-item__cvv {
+  text-align: right;
+  padding: 15px;
+}
+
+.card-item__cvvTitle {
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+
+.card-item__cvvBand {
+  height: 45px;
+  margin-bottom: 30px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: rgb(255, 255, 255);
+}
