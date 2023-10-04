@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/open-sans-variable.woff2') format('woff2-variations');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Italic'),
+    url('./fonts/open-sans-regular.woff2') format('woff2'),
+    url('./fonts/open-sans-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +26,7 @@ body {
 }
 
 .card-item {
+  color: white;
   max-width: 430px;
   height: 270px;
   margin: auto;
@@ -15,6 +34,7 @@ body {
 }
 
 .card-item__side {
+  background: url('bg.jpeg') left top / cover blue;
   height: 100%;
   width: 100%;
 }
@@ -68,11 +88,17 @@ body {
 }
 
 .card-item__cvvBand {
+  background: rgb(255, 255, 255);
+  color: rgb(26, 59, 93);
   height: 45px;
   margin-bottom: 30px;
   padding-right: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: rgb(255, 255, 255);
+}
+
+.card-item__holder,
+.card-item__dateTitle {
+  opacity: 0.7;
 }
