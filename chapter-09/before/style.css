@@ -1,13 +1,5 @@
 @font-face {
   font-family: 'Open Sans';
-  src: url('./fonts/open-sans-variable.woff2') format('woff2-variations');
-  font-weight: 100 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Open Sans';
   src: local('Open Sans Italic'),
     url('./fonts/open-sans-regular.woff2') format('woff2'),
     url('./fonts/open-sans-regular.woff') format('woff');
@@ -16,12 +8,43 @@
   font-display: swap;
 }
 
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/open-sans-variable.woff2') format('woff2-variations');
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+      url('./fonts/open-sans-regular.woff2') format('woff2'),
+      url('./fonts/open-sans-regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: local('Open SansBold'), local('OpenSans-Bold'),
+      url('./fonts/open-sans-regular.woff2') format('woff2'),
+      url('./fonts/open-sans-regular.woff') format('woff');
+    font-weight: bold;
+    font-display: swap;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background: rgb(221, 238, 252);
+  font-family: 'Open Sans', sans-serif;
   margin-top: 80px;
 }
 
@@ -60,6 +83,8 @@ body {
   justify-content: space-between;
   padding: 10px 15px;
   margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .card-item__content {
@@ -96,9 +121,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-style: italic;
 }
 
 .card-item__holder,
 .card-item__dateTitle {
+  font-size: 0.9rem;
   opacity: 0.7;
+}
+
+.card-item__name,
+.card-item__dateItem {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
