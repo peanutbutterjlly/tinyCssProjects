@@ -58,6 +58,7 @@ body {
 
 .card-item__side {
   background: url('bg.jpeg') left top / cover blue;
+  border-radius: 0.9rem;
   height: 100%;
   width: 100%;
 }
@@ -114,6 +115,7 @@ body {
 
 .card-item__cvvBand {
   background: rgb(255, 255, 255);
+  border-radius: 0.25rem;
   color: rgb(26, 59, 93);
   height: 45px;
   margin-bottom: 30px;
@@ -134,4 +136,26 @@ body {
 .card-item__dateItem {
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(-180deg);
+  }
+
+  .card-item {
+    transform-style: preserve-3d;
+    transition: transform 350ms cubic-bezier(0.71, 0.03, 0.56, 0.85);
+  }
+
+  .card-item__side {
+    backface-visibility: hidden;
+  }
+
+  .card-item:hover {
+    transform: rotateY(180deg);
+  }
 }
