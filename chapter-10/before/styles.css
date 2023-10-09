@@ -57,3 +57,47 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+
+input:not([type='radio'], [type='checkbox']),
+textarea,
+select {
+  font-size: 1rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-bottom: solid 1px var(--primary);
+  border-image: linear-gradient(to right, var(--primary), var(--accent)) 1;
+  padding: 0 0 0.25rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  appearance: none;
+  background-color: var(--background);
+  margin: 0;
+  width: 1.75em;
+  height: 1.75em;
+  border: 1px solid currentcolor;
+  display: inline-grid;
+  place-content: center;
+}
+
+input[type='radio'] {
+  border-radius: 50%;
+}
+
+input[type='checkbox'] {
+  border-radius: 4px;
+}
+
+:where(input[type='radio'], input[type='checkbox'])::before {
+  display: block;
+  content: '';
+  width: 1em;
+  height: 1em;
+}
