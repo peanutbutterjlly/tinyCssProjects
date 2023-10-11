@@ -69,6 +69,7 @@ select {
   border-image: linear-gradient(to right, var(--primary), var(--accent)) 1;
   padding: 0 0 0.25rem;
   width: 100%;
+  background-color: var(--background-card);
 }
 
 textarea {
@@ -100,4 +101,53 @@ input[type='checkbox'] {
   content: '';
   width: 1em;
   height: 1em;
+}
+
+:where(input[type='radio'], input[type='checkbox']):hover::before {
+  background: var(--hover);
+}
+
+:where(input[type='radio'], input[type='checkbox']):checked::before {
+  background: var(--accent);
+}
+
+input[type='radio']::before {
+  border-radius: 50%;
+}
+
+input[type='checkbox']::before {
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+:is(input[type='radio'], input[type='checkbox']:checked) {
+  border-color: var(--accent);
+}
+
+label,
+legend {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  color: var(--label-color);
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+  font-size: 0.75em;
+}
+
+button[type='submit'] {
+  border: none;
+  border-radius: 36px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+}
+
+.actions {
+  margin-top: 2rem;
 }
