@@ -165,3 +165,16 @@ button[type='submit'] {
   vertical-align: baseline;
   margin-right: 0.5ch;
 }
+
+.error span {
+  display: none;
+}
+
+.dirty:invalid + .error span {
+  display: inline;
+}
+
+:is(input, textarea) .dirty:invalid {
+  border-color: var(--error);
+  border-image: none;
+}
