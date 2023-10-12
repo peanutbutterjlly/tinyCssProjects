@@ -151,3 +151,17 @@ button[type='submit'] {
 .actions {
   margin-top: 2rem;
 }
+
+.error {
+  color: var(--error);
+  margin: 0.25rem 0 2rem;
+}
+
+.error span::before {
+  content: url('./img/error.svg');
+  display: inline-block;
+  width: 1.25ex;
+  height: 1.25ex;
+  vertical-align: baseline;
+  margin-right: 0.5ch;
+}
