@@ -178,3 +178,26 @@ button[type='submit'] {
   border-color: var(--error);
   border-image: none;
 }
+
+:is(
+    input:not([type='radio'], [type='checkbox']),
+    textarea,
+    select
+  ):focus-visible {
+  outline: none;
+  border-bottom: dashed 1px var(--primary);
+  border-image: none;
+}
+
+:is(
+    input:not([type='radio'], [type='checkbox']).dirty:invalid,
+    textarea.dirty:invalid,
+    select.dirty:invalid
+  ):focus-visible {
+  border-color: var(--error);
+}
+
+:where(input[type='radio'], input[type='checkbox']):focus-visible {
+  outline: dashed 1px var(--primary);
+  outline-offset: 2px;
+}
