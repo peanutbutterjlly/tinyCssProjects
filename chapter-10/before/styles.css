@@ -201,3 +201,7 @@ button[type='submit'] {
   outline: dashed 1px var(--primary);
   outline-offset: 2px;
 }
+
+select:hover {
+  cursor: pointer;
+}
