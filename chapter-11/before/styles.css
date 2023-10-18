@@ -1,4 +1,6 @@
-.main { margin: 48px; }
+.main {
+  margin: 48px;
+}
 
 .share {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -26,7 +28,7 @@
   outline-offset: -5px;
 }
 
-.share__menu-item { 
+.share__menu-item {
   list-style: none;
   background: inherit;
   border-radius: inherit;
