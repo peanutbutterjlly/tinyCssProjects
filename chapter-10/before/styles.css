@@ -205,3 +205,9 @@ button[type='submit'] {
 select:hover {
   cursor: pointer;
 }
+
+@media (forced-colors: active) {
+  :where(input[type='radio'], input[type='checkbox']):checked::before {
+    background-color: CanvasText;
+  }
+}
