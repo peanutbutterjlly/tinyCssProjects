@@ -21,9 +21,10 @@
 }
 
 .share__button:hover,
-.share__button:focus-visible {
+.share__button:focus-visible,
+.share_expanded .share__button {
   cursor: pointer;
-  outline: 1px solid black;
+  outline: solid 1px black;
   outline-offset: -5px;
 }
 
@@ -39,17 +40,21 @@
   padding: 0;
   background: inherit;
   border-radius: inherit;
+  width: 0;
+  overflow: hidden;
+  transition: width 250ms ease-in-out;
 }
 
 .share__link:link,
 .share__link:visited {
   height: 48px;
   width: 48px;
+  border: solid 1px transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid transparent;
+  background: inherit;
 }
 
 .share__link:hover,
@@ -57,5 +62,10 @@
   border-color: black;
   outline: none;
   transform: scale(1.25);
-  background: inherit;
+}
+
+.share_expanded .share__menu {
+  width: 200px;
+  padding: 0 2rem 0 1rem;
+  /* overflow: visible; */
 }
