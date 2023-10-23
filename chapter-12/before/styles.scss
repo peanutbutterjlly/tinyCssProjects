@@ -45,3 +45,16 @@ img:last-of-type {
   @extend .image-base;
   @include handle-img(50px, center, left);
 }
+
+a {
+  font-weight: 800;
+  &:link, &:visited {
+    color: $primary;
+    text-decoration-style: dotted;
+  }
+  &:hover { text-decoration-style: dashed; }
+  &:focus {
+    text-decoration-style: solid;
+    outline: none;
+  }
+}
